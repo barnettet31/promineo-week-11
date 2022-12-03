@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link, Outlet } from "react-router-dom";
 import { FooterBar } from "./footer.component";
+import { LayoutContainer } from "../layout/layout.component";
 
 
 const pages = [
@@ -41,18 +42,17 @@ function NavBar() {
               component={Link}
               to="/"
               sx={{
-                mr: 2,
+                mr: 4,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "Roboto",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
               }}>
-              TicTac Toe
+              Tic Tac Toe
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, alignSelf:'flex-end' }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -80,8 +80,8 @@ function NavBar() {
                   display: { xs: "block", md: "none" },
                 }}>
                 {pages.map(({ title, path }) => (
-                  <MenuItem key={title} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center" component={Link} to={path}>
+                  <MenuItem key={title} onClick={handleCloseNavMenu} >
+                    <Typography fontStyle={{textDecoration:'none'}} textAlign="center" color="white" component={Link} to={path}>
                       {title}
                     </Typography>
                   </MenuItem>
@@ -108,9 +108,10 @@ function NavBar() {
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map(({ title, path }) => (
                 <Button
+                 color="inherit"
                   key={title}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, display: "block", }}
                   component={Link}
                   to={path}>
                   {title}
@@ -120,7 +121,9 @@ function NavBar() {
           </Toolbar>
         </Container>
       </AppBar>
+      <LayoutContainer>
       <Outlet />
+      </LayoutContainer>
      <FooterBar/>
     </>
   );
