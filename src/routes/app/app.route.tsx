@@ -98,6 +98,7 @@ export function AppPage (){
         if(isThereAWinner=== 0 ) return incrementScore(0);
        }
        checkForWinner();
+       console.table(score);
         
     },[isThereAWinner])
 
