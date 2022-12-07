@@ -16,6 +16,8 @@
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.16",
+    "@types/prismjs": "^1.26.0",
+    "babel-plugin-prismjs": "^2.1.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "prismjs": "^1.29.0",
