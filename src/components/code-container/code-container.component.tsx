@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Container,
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -90,7 +91,7 @@ const resetBoardCode = `const resetBoard = ()=> setTimeout(()=>{
   setBoard(initialBoardState);
 }, 500);`;
   return (
-    <div>
+    <Container>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon color="info" />}
@@ -161,6 +162,6 @@ const resetBoardCode = `const resetBoard = ()=> setTimeout(()=>{
           <CodeElement type="typescript" code={resetBoardCode} />
         </AccordionDetails>
       </Accordion>
-    </div>
+    </Container>
   );
 };
