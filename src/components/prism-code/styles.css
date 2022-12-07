@@ -1,8 +1,5 @@
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+jsx+tsx+typescript */
-pre{
-    border-radius:5px;
-}
 code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
