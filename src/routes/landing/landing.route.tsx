@@ -5,8 +5,8 @@ import { LayoutContainer } from "../../components/layout/layout.component";
 export function LandingPage() {
   return (
     <>
-      <Typography variant="h1">React TicTac Toe</Typography>
-      <Typography variant="h3">Hello everyone!</Typography>
+      <Typography variant="h2">React TicTac Toe</Typography>
+      <Typography variant="h4">Hello everyone!</Typography>
       <Typography variant="body1">
         This week I decided to make a to do list app using typescript!
       </Typography>

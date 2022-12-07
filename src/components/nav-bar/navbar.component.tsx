@@ -81,7 +81,7 @@ function NavBar() {
                 }}>
                 {pages.map(({ title, path }) => (
                   <MenuItem key={title} onClick={handleCloseNavMenu} >
-                    <Typography fontStyle={{textDecoration:'none'}} textAlign="center" color="white" component={Link} to={path}>
+                    <Typography fontStyle={{textDecoration:'none', color:'inherit'}} textAlign="center"  component={Link} to={path}>
                       {title}
                     </Typography>
                   </MenuItem>

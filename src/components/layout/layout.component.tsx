@@ -5,7 +5,7 @@ interface IProps {
 }
 export const LayoutContainer = ({ children }: IProps) => {
   return (
-    <Container>
+    <Container sx={{paddingBottom:10}}>
       <Box
         component="main"
         sx={{
@@ -14,7 +14,7 @@ export const LayoutContainer = ({ children }: IProps) => {
           alignItems: "center",
           justifyContent: "center",
           mt: 4,
-          gap:4,
+          gap:1,
           textAlign:'center'
         }}>
         {children}
