@@ -39,6 +39,7 @@ export function AppPage (){
         setBoard(initialBoardState);
     }, 500);
     const incrementScore = (winner:number)=>{
+        console.log(winner);
         switch(winner){
             case 0:
                 setScore((prevState)=>{
@@ -46,6 +47,7 @@ export function AppPage (){
                         ...prevState,
                         tie:prevState.tie++
                     }
+                    console.log("tie dude");
                     return newState;
                 });
                 break;
@@ -55,6 +57,7 @@ export function AppPage (){
                         ...prevState,
                         player2:prevState.player2++
                     }
+                    console.log('player 2');
                     return newState;
                 });
                 break;
@@ -64,6 +67,7 @@ export function AppPage (){
                     ...prevState,
                     player1:prevState.player1++
                 }
+                console.log('player 1');
                 return newState;
             });
              break;
