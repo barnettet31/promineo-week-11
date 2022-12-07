@@ -39,7 +39,6 @@ export function AppPage (){
         setBoard(initialBoardState);
     }, 500);
     const incrementScore = (winner:number)=>{
-        console.log(winner);
         switch(winner){
             case 0:
                 setScore((prevState)=>{
@@ -102,9 +101,9 @@ export function AppPage (){
         if(isThereAWinner=== 0 ) return incrementScore(0);
        }
        checkForWinner();
-       console.table(score);
         
     },[isThereAWinner])
+    useEffect(()=>console.log(score), [score]);
 
     return (
         <>
