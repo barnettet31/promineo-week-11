@@ -1,4 +1,4 @@
-import { Alert, Stack, useTheme } from "@mui/material";
+import { Alert, Button, Stack, useTheme } from "@mui/material";
 import { Container } from "@mui/system";
 import { useEffect, useState } from "react";
 import { ArrNulNum, Board, NulNum } from "../../components/board/board.component";
@@ -34,10 +34,10 @@ export function AppPage (){
     const [isPlayerOne,setIsPlayerOne] = useState<boolean>(true);
     const isThereAWinner: number | null = calculateTheWinner(board);
     const theme = useTheme()
-    const resetBoard = ()=> setTimeout(()=>{
+    const resetBoard = ()=> {
         setIsPlayerOne(true);
         setBoard(initialBoardState);
-    }, 500);
+    };
     const incrementScore = (winner:number)=>{
         switch(winner){
             case 0:
@@ -46,7 +46,6 @@ export function AppPage (){
                         ...prevState,
                         tie:prevState.tie+1
                     }
-                    console.log("tie dude");
                     return newState;
                 });
                 break;
@@ -56,7 +55,6 @@ export function AppPage (){
                         ...prevState,
                         player2:prevState.player2+1
                     }
-                    console.log('player 2');
                     return newState;
                 });
                 break;
@@ -66,7 +64,6 @@ export function AppPage (){
                     ...prevState,
                     player1:prevState.player1+1
                 }
-                console.log('player 1');
                 return newState;
             });
              break;
@@ -110,6 +107,7 @@ export function AppPage (){
         <Score player1={score.player1} player2={score.player2} tie={score.tie} turn={isPlayerOne}/>
         <Container maxWidth='sm'>
         <Board squares={board} onClick={(number)=>handleClick(number)}/>
+        <Button sx={{marginTop:"1em"}} variant="outlined" onClick={resetBoard}>Reset?</Button>
         {isThereAWinner !== null ? (<Alert color="info" onClose={()=>resetBoard()} sx={{backgroundColor:theme.palette.background.paper, color:theme.palette.primary.main, display:'flex', alignItems:'center'}}>{`Winner:  ${_chooseWinnerText(isThereAWinner)}`}</Alert>): null}
         </Container>
         </>
