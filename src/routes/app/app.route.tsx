@@ -44,7 +44,7 @@ export function AppPage (){
                 setScore((prevState)=>{
                     const newState: IScoreProps = {
                         ...prevState,
-                        tie:prevState.tie++
+                        tie:prevState.tie+1
                     }
                     console.log("tie dude");
                     return newState;
@@ -54,7 +54,7 @@ export function AppPage (){
                 setScore((prevState)=>{
                     const newState: IScoreProps = {
                         ...prevState,
-                        player2:prevState.player2++
+                        player2:prevState.player2+1
                     }
                     console.log('player 2');
                     return newState;
@@ -64,7 +64,7 @@ export function AppPage (){
             setScore((prevState)=>{
                 const newState: IScoreProps = {
                     ...prevState,
-                    player1:prevState.player1++
+                    player1:prevState.player1+1
                 }
                 console.log('player 1');
                 return newState;
