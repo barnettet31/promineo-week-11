@@ -2,13 +2,14 @@
   "name": "promineo-week-11",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://barnettet31.github.io/promineo-week-11",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "jest",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
