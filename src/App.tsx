@@ -11,8 +11,8 @@ function App() {
    <Routes>
     <Route element={<NavBar/>}>
       <Route index element={<LandingPage/>} path="/"/>
-      <Route index element={<AppPage/>} path="/app"/>
-      <Route index element={<CodePage/>} path="/code"/>
+      <Route  element={<AppPage/>} path="/app"/>
+      <Route  element={<CodePage/>} path="/code"/>
     </Route>
    </Routes>
   )
