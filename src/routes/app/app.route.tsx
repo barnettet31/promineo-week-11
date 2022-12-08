@@ -1,4 +1,4 @@
-import { Alert, Button, Stack, useTheme } from "@mui/material";
+import { Alert, Button, useTheme } from "@mui/material";
 import { Container } from "@mui/system";
 import { useEffect, useState } from "react";
 import { ArrNulNum, Board, NulNum } from "../../components/board/board.component";
@@ -99,8 +99,7 @@ export function AppPage (){
        }
        checkForWinner();
         
-    },[isThereAWinner])
-    useEffect(()=>console.log(score), [score]);
+    },[isThereAWinner]);
 
     return (
         <>
